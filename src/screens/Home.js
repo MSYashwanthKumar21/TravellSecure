@@ -21,10 +21,10 @@ export default function Home({ navigation }) {
     return (
         <View style={styles.container}>
             <Button title="Add New Trip" onPress={() => navigation.navigate('AddTrip')} />
+            <View style={{ height: 10 }} />
             <Button title="Open Map" onPress={() => navigation.navigate('Map')} />
 
-            <View style={{ height: 10 }} />
-            <Button title="Open Map" onPress={() => navigation.navigate('Map')} /> {/* ✅ Corrected here */}
+
             <TripHistory trips={trips} onSelect={handleSelectTrip} />
         </View>
     );

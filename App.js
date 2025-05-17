@@ -9,12 +9,6 @@ import AddTrip from './src/screens/AddTrip';
 import TripDetails from './src/screens/TripDetails';
 import MapScreen from './src/screens/Mapscreen';
 
-
-import Mapbox from '@rnmapbox/maps';
-
-// ✅ Set your access token *outside* the component
-Mapbox.setAccessToken('pk.eyJ1IjoibWF5azU3MyIsImEiOiJjbTg3ZzJwZmkwN29xMmpxdTVsbXhudDluIn0.v0pNdMjYnd235k_vUWyuBQ');
-
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -27,12 +21,6 @@ export default function App() {
                 <Stack.Screen name="AddTrip" component={AddTrip} options={{ title: 'Add New Trip' }} />
                 <Stack.Screen name="TripDetails" component={TripDetails} options={{ title: 'Trip Details' }} />
                 <Stack.Screen name="Map" component={MapScreen} options={{ title: 'Map View' }} />
-                <Stack.Screen
-                    name="Map"
-                    component={MapScreen}
-                    options={{ title: 'Map View' }}
-                />
-
             </Stack.Navigator>
         </NavigationContainer>
     );
